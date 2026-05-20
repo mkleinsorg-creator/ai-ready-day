@@ -5,10 +5,10 @@
 
 ## Start in 3 Schritten
 
-### 1. Terminal öffnen
+### 1. Terminal öffnen (nur für das einmalige Setup)
 
 Drück `Cmd + Leertaste`, tipp `Terminal`, drück Enter.
-Ein schwarzes Fenster geht auf. Das ist alles, was du heute über Terminals wissen musst.
+Ein schwarzes Fenster geht auf. **Hier passiert nur das Setup** — danach arbeitest du komplett in der Claude Desktop App.
 
 ### 2. Diesen Befehl reinkopieren und Enter drücken
 
@@ -19,23 +19,19 @@ curl -fsSL https://raw.githubusercontent.com/mkleinsorg-creator/ai-ready-day/mai
 Das Script richtet dir alles ein und erklärt dabei, was es tut.
 Dauert ca. 5 Minuten. Wenn etwas hakt: Max rufen.
 
-### 3. Loslegen
+### 3. In die Claude Desktop App wechseln
 
-```bash
-cd ~/ai-ready-day
-claude
-```
-
-Im Claude-Fenster tippst du:
-
-```
-/load prompts/00-router.md
-```
+- **Öffne die Claude Desktop App** (die du eh schon hast)
+- Aktiviere das **integrierte Claude-Code-Fenster** (Max zeigt dir das morgen kurz)
+- Kopier den Master-Prompt aus `~/ai-ready-day/prompts/00-router.md` in die erste Nachricht
+  *(Alternativ:* `/load ~/ai-ready-day/prompts/00-router.md`*)*
 
 **Was als nächstes passiert:**
 1. Claude fragt nach deinem Namen + deiner Idee
 2. **Schärfung mit BMAD** — eine Methode, die deine Idee in baubare Schritte zerlegt (außer bei Meta-Ads, da geht's direkt los)
 3. Gemeinsam baust du Schritt für Schritt das, was du dir vorgenommen hast
+
+Das Terminal kannst du danach geschlossen lassen oder im Hintergrund liegen — wir holen es nur raus, wenn ein echter Build-Befehl ansteht.
 
 ---
 

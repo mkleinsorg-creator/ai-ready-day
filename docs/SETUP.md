@@ -47,9 +47,9 @@ Supabase ist eine Datenbank — also der Ort, wo deine App ihre Infos speichert.
 - **Free**-Plan auswählen
 - Fertig — Projekte legen wir später per Befehl an
 
-## 4. Terminal öffnen
+## 4. Terminal öffnen (nur für das einmalige Setup)
 
-Das Terminal ist ein Fenster, in dem du dem Computer Befehle in Textform gibst. Es sieht erstmal nackt aus — keine Sorge.
+Das Terminal ist ein Fenster, in dem du dem Computer Befehle in Textform gibst. **Heute brauchst du es nur einmal, fürs Setup.** Danach arbeitest du in der gewohnten Claude Desktop App weiter.
 
 - Drück `Cmd + Leertaste`
 - Tipp `Terminal`
@@ -72,20 +72,14 @@ Das Script erklärt unterwegs, was es macht. Lies mit — das hilft beim Versteh
 - Mit dem zugehörigen Account anmelden
 - Zurück ins Terminal — Script läuft weiter
 
-## 6. Loslegen — der erste echte Schritt heißt BMAD
+## 6. Rüber in die Claude Desktop App — der erste echte Schritt heißt BMAD
 
-Wenn das Script `✅ Fertig` sagt, tippst du:
+Wenn das Script `✅ Fertig` sagt: **Terminal kannst du jetzt liegenlassen.**
 
-```bash
-cd ~/ai-ready-day
-claude
-```
-
-Du bist jetzt in Claude Code. Dann:
-
-```
-/load prompts/00-router.md
-```
+- Öffne die **Claude Desktop App** (kennst du schon — das ist die, in der du sonst chattest)
+- Aktiviere das **integrierte Claude-Code-Fenster** (Max zeigt dir das morgen kurz — es ist ein eigenes Fenster innerhalb der App, in dem Slash-Commands wie `/bmad` funktionieren)
+- In die erste Nachricht kopierst du den Master-Prompt aus `~/ai-ready-day/prompts/00-router.md` rein
+  *(Alternativ:* `/load ~/ai-ready-day/prompts/00-router.md` *direkt eintippen)*
 
 Claude begrüßt dich und fragt, was du heute bauen willst.
 
@@ -96,6 +90,10 @@ Lass dich davon nicht abschrecken — du musst die Methode nicht verstehen. Du b
 *(Ausnahme: Wer Meta-Ads baut, überspringt BMAD und geht direkt zur Facebook Ads CLI.)*
 
 Ab hier: einfach machen lassen. Du bist in guten Händen.
+
+## Wann brauchst du das Terminal nochmal?
+
+Nur, wenn Claude dir sagt *"Kopier diesen Befehl ins Terminal"* — z. B. wenn deine Web-App lokal gestartet oder ins Internet gestellt werden soll. Dann holst du das Terminal-Fenster kurz nach vorne, drückst Enter, und gehst zurück in die Claude Desktop App.
 
 ---
 
