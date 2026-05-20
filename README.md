@@ -23,8 +23,11 @@ Dauert ca. 5 Minuten. Wenn etwas hakt: Max rufen.
 
 - **Öffne die Claude Desktop App** (die du eh schon hast)
 - Drück **`Cmd + 3`** — das öffnet das integrierte Claude-Code-Fenster
-- Kopier den Master-Prompt aus `~/ai-ready-day/prompts/00-router.md` in die erste Nachricht
-  *(Alternativ:* `/load ~/ai-ready-day/prompts/00-router.md`*)*
+- In die erste Nachricht eintippen (genau so kopierbar):
+
+```
+Lies @~/ai-ready-day/prompts/00-router.md vollständig und folge diesen Anweisungen als Master-Prompt.
+```
 
 **Was als nächstes passiert:**
 1. Claude fragt nach deinem Namen + deiner Idee

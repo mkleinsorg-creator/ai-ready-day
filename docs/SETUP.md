@@ -86,8 +86,11 @@ Wenn das Script `✅ Fertig` sagt: **Terminal kannst du jetzt liegenlassen.**
 
 - Öffne die **Claude Desktop App** (kennst du schon — das ist die, in der du sonst chattest)
 - Drück **`Cmd + 3`** — das öffnet das integrierte Claude-Code-Fenster innerhalb der App. Dort funktionieren Slash-Commands wie `/bmad`.
-- In die erste Nachricht kopierst du den Master-Prompt aus `~/ai-ready-day/prompts/00-router.md` rein
-  *(Alternativ:* `/load ~/ai-ready-day/prompts/00-router.md` *direkt eintippen)*
+- In die erste Nachricht eintippen oder reinkopieren (genau so):
+
+```
+Lies @~/ai-ready-day/prompts/00-router.md vollständig und folge diesen Anweisungen als Master-Prompt.
+```
 
 Claude begrüßt dich und fragt, was du heute bauen willst.
 
