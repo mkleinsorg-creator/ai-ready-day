@@ -43,15 +43,35 @@ fi
 
 # 3. Git
 if ! command -v git >/dev/null 2>&1; then
-  say "Schritt 3/9 · Ich installiere Git."
+  say "Schritt 3/10 · Ich installiere Git."
   brew install git
 else
-  say "Schritt 3/9 · Git"
+  say "Schritt 3/10 · Git"
   ok "schon installiert"
 fi
 
-# 4. Repo klonen
-say "Schritt 4/9 · Ich lade das AI-Ready-Day-Repo runter."
+# 4. GitHub CLI + Auth-Login
+if ! command -v gh >/dev/null 2>&1; then
+  say "Schritt 4/10 · Ich installiere die GitHub-CLI (damit du später ohne Passwort-Eingabe pushen kannst)."
+  brew install gh
+else
+  say "Schritt 4/10 · GitHub CLI"
+  ok "schon installiert"
+fi
+
+# Auth-Status prüfen, ggf. Login starten
+if ! gh auth status >/dev/null 2>&1; then
+  say "Du loggst dich gleich bei GitHub ein — Browser geht von selbst auf."
+  echo "    Wähl: 'GitHub.com' → 'HTTPS' → 'Login with a web browser'."
+  echo "    Code im Terminal kopieren, im Browser einfügen, autorisieren."
+  echo ""
+  gh auth login -h github.com -p https -w || say "GitHub-Login übersprungen — du kannst das später mit 'gh auth login' nachholen."
+else
+  ok "Bei GitHub bereits eingeloggt"
+fi
+
+# 5. Repo klonen
+say "Schritt 5/10 · Ich lade das AI-Ready-Day-Repo runter."
 if [ -d "$TARGET_DIR/.git" ]; then
   cd "$TARGET_DIR" && git pull
   ok "Repo ist aktuell"
@@ -62,35 +82,35 @@ else
 fi
 cd "$TARGET_DIR"
 
-# 5. Claude Code
+# 6. Claude Code
 if ! command -v claude >/dev/null 2>&1; then
-  say "Schritt 5/9 · Ich installiere Claude Code — unser Hauptwerkzeug."
+  say "Schritt 6/10 · Ich installiere Claude Code — unser Hauptwerkzeug."
   npm install -g @anthropic-ai/claude-code
 else
-  say "Schritt 5/9 · Claude Code"
+  say "Schritt 6/10 · Claude Code"
   ok "schon installiert"
 fi
 
-# 6. Vercel CLI
+# 7. Vercel CLI
 if ! command -v vercel >/dev/null 2>&1; then
-  say "Schritt 6/9 · Ich installiere die Vercel-CLI (um Apps ins Internet zu bringen)."
+  say "Schritt 7/10 · Ich installiere die Vercel-CLI (um Apps ins Internet zu bringen)."
   npm install -g vercel
 else
-  say "Schritt 6/9 · Vercel CLI"
+  say "Schritt 7/10 · Vercel CLI"
   ok "schon installiert"
 fi
 
-# 7. Supabase CLI
+# 8. Supabase CLI
 if ! command -v supabase >/dev/null 2>&1; then
-  say "Schritt 7/9 · Ich installiere die Supabase-CLI (für Datenbanken)."
+  say "Schritt 8/10 · Ich installiere die Supabase-CLI (für Datenbanken)."
   brew install supabase/tap/supabase
 else
-  say "Schritt 7/9 · Supabase CLI"
+  say "Schritt 8/10 · Supabase CLI"
   ok "schon installiert"
 fi
 
-# 8. BMAD + n8n Agents/Commands installieren
-say "Schritt 8/9 · Ich lege die BMAD-Methode und die n8n-Spezialisten in deinem Claude-Verzeichnis ab."
+# 9. BMAD + n8n Agents/Commands installieren
+say "Schritt 9/10 · Ich lege die BMAD-Methode und die n8n-Spezialisten in deinem Claude-Verzeichnis ab."
 mkdir -p "$HOME/.claude/agents" "$HOME/.claude/commands"
 
 # BMAD-Agents
@@ -105,8 +125,8 @@ ok "8 n8n-Agenten installiert"
 cp -f "$TARGET_DIR/bundles/bmad/commands/bmad.md" "$HOME/.claude/commands/bmad.md"
 ok "/bmad Slash-Command verfügbar"
 
-# 9. MCP-Konfiguration
-say "Schritt 9/9 · Ich richte die MCP-Verbindungen ein (Filesystem + Asana)."
+# 10. MCP-Konfiguration
+say "Schritt 10/10 · Ich richte die MCP-Verbindungen ein (Filesystem + Asana)."
 mkdir -p "$HOME/.claude"
 sed "s|<DEIN_USER>|$USER|g" "$TARGET_DIR/.mcp.json.template" > "$HOME/.claude/.mcp.json"
 ok ".mcp.json geschrieben"

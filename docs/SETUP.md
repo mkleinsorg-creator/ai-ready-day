@@ -67,10 +67,9 @@ curl -fsSL https://raw.githubusercontent.com/mkleinsorg-creator/ai-ready-day/mai
 
 Das Script erklärt unterwegs, was es macht. Lies mit — das hilft beim Verstehen.
 
-**Wenn das Script dich auffordert, dich irgendwo einzuloggen:**
-- Browser geht von selbst auf
-- Mit dem zugehörigen Account anmelden
-- Zurück ins Terminal — Script läuft weiter
+**Wichtiger Moment während des Scripts:** Du wirst einmal nach deinem **GitHub-Login** gefragt. Der Browser öffnet sich von selbst, du loggst dich mit deinem GitHub-Account ein, autorisierst — fertig. Nach diesem einen Login bleibt deine Authentifizierung gespeichert, du musst das nicht nochmal machen.
+
+Falls das Script dich noch an anderer Stelle zum Einloggen auffordert: gleiches Prinzip — Browser geht auf, anmelden, fertig.
 
 ## 6. Rüber in die Claude Desktop App — der erste echte Schritt heißt BMAD
 
