@@ -1,63 +1,52 @@
-# Pfad: Web-App bauen
+# Tech-Briefing für BMAD · Pfad: Web-App
 
-## Stack
-- **Next.js** — das Framework, in dem deine App lebt
-- **Vercel** — wo deine App ins Internet kommt
-- **Supabase** — Datenbank (nur falls deine App eine braucht)
+> Diese Datei ist **kein User-Prompt**, sondern ein **Pflicht-Kontext für BMAD**.
+> Der Master-Prompt übergibt diesen Inhalt beim Start von `/bmad` an die BMAD-Agenten.
+> BMAD-Architect und BMAD-Dev richten ihre Empfehlungen nach diesem Briefing.
 
-## Vorgehen
+## Tech-Stack (verbindlich für diesen Tag)
 
-### 1. BMAD-Output aufgreifen
-BMAD hat dir Stories, Architektur und einen Bauplan gegeben. Den nehmen wir jetzt als Leitplanke.
+| Layer | Tool | Warum |
+|---|---|---|
+| Frontend-Framework | **Next.js** (App-Router) | Standard im Haus, sofort deploybar |
+| Hosting | **Vercel** | Ein-Befehl-Deploy, GitHub-Integration |
+| Datenbank (falls nötig) | **Supabase** | Free-Tier, schnelles Setup |
+| Styling | **TailwindCSS** | Schnell, vorhersagbar, von Next-CLI default |
+| Versionierung | **Git + GitHub** | Standard, im Bootstrap installiert |
 
-### 2. Projekt-Ordner anlegen
-```bash
-mkdir -p ~/ai-ready-day/projects/<projektname>
-cd ~/ai-ready-day/projects/<projektname>
-```
+## Was BMAD-Architect berücksichtigen muss
 
-### 3. Next.js initialisieren
-```bash
-npx create-next-app@latest .
-```
-Bei den Fragen: alle Defaults sind okay. Erklär dem User vorher kurz, was Next.js ist und warum wir es nutzen.
+- **Keep it small:** Eine Story zuerst zum Laufen bringen. Dann erweitern.
+- **Deploy früh:** Nach Story 1 schon einmal `vercel deploy` — das erste Live-Erlebnis ist wichtiger als Polish.
+- **Datenbank nur, wenn echt nötig:** Bei reinen Frontend-Apps (Landingpage, Mockup, statisches Tool) Supabase weglassen. Komplexität raus.
+- **Keine Auth in der ersten Iteration:** Anonyme Demo zuerst. Auth ist eine Story 2-3-Sache, niemals Story 1.
 
-### 4. Erste Seite anpassen
-Öffne `app/page.tsx` und bau die Landing-Seite gemäß BMAD-Stories. Erklär dem User jeden Schritt:
-- Was tust du gerade?
-- Welche Datei änderst du?
-- Wie sieht das Ergebnis aus?
+## Was BMAD-Dev berücksichtigen muss
 
-### 5. Lokal testen
-```bash
-npm run dev
-```
-Browser öffnet sich. **Erfolg sichtbar machen:** *"Deine App läuft! Du kannst sie jetzt auf [http://localhost:3000](http://localhost:3000) sehen."*
+- **Erklär jeden Befehl, bevor du ihn ausführst.** User hat keine Code-Erfahrung.
+- **Bash-Tool-Berechtigungen:** Vor jedem Shell-Befehl fragt Claude Code um Erlaubnis. Bereite den User darauf vor: *"Du wirst jetzt 'Allow' geklickt, das ist okay."*
+- **Pfade:** Projekte landen in `~/ai-ready-day/projects/<projektname>/`
+- **npm-Defaults annehmen:** Bei `create-next-app`-Fragen alle Defaults durchklicken, keine User-Interaktion verlangen
+- **Lokaler Server vor Deploy:** `npm run dev` zeigt das Ergebnis auf `localhost:3000` — Aha-Moment. Erst danach Deploy.
+- **Vercel-Login beim ersten Deploy:** Browser-OAuth, User loggt sich mit GitHub ein. Einmaliger Schritt.
 
-### 6. Supabase nur, wenn nötig
-Bei reinen Frontend-Apps (Landingpage, Mini-Dashboard ohne Persistenz) brauchst du keine Datenbank.
+## Was BMAD-QA berücksichtigen muss
 
-Wenn doch:
-```bash
-supabase init
-supabase login
-supabase projects create <name>
-```
+- **Smoke-Test reicht:** *"Lädt die Seite? Klickt der Button? Speichert die DB?"* — keine vollständige Test-Suite.
+- **Manuell testen lassen:** User soll selbst im Browser klicken und Feedback geben.
+- **Bei Fehlern:** Fehlermeldung vorlesen, auf Deutsch übersetzen, Fix vorschlagen.
 
-Schema mit BMAD-Output abgleichen. SQL-Migrations in `supabase/migrations/`.
+## falkemedia-spezifische Constraints
 
-### 7. Deployen mit Vercel
-```bash
-vercel
-```
-Beim ersten Mal autorisierst du dich im Browser. Folge den Prompts.
+- **Keine echten Kunden-Daten** in heute gebauten Test-Apps. Wir spielen mit Dummy-Daten.
+- **GitHub-Repos** unter User's persönlichem Account, nicht falkemedia-Org (kein Org-Admin-Zugriff im Workshop).
+- **Vercel-Hobby-Plan:** ausreichend für heute, kein Pro-Upgrade nötig.
 
-Bei Erfolg: **explizit feiern**.
-> *"Deine App ist jetzt live unter [URL]. Du kannst sie deinen Kolleg:innen schicken."*
+## Erfolgs-Definition für diesen Pfad
 
-## Wichtige Prinzipien für diesen Pfad
+Am Ende des Tages hat der User:
+1. Eine funktionierende App **lokal laufen** (`localhost:3000`)
+2. **Live im Internet deployt** (Vercel-URL, die er teilen kann)
+3. Mindestens **eine Iteration** durchlaufen (erste Version → Feedback → zweite Version)
 
-- Erklär jeden Befehl vorher in einem Satz.
-- Wenn ein Fehler kommt: lies ihn vor, übersetz ihn auf Deutsch, schlag eine Lösung vor.
-- Nach jedem sichtbaren Erfolg (lokaler Browser läuft / Deploy geklappt): feier ihn explizit.
-- Halt die Pakete klein. Erst zum Laufen bringen, dann erweitern.
+Wenn nur 1 + 2 erreicht werden: völlig okay. Wenn 3 dazukommt: brilliant.
