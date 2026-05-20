@@ -13,7 +13,7 @@ Ein schwarzes Fenster geht auf. **Hier passiert nur das Setup** — danach arbei
 ### 2. Diesen Befehl reinkopieren und Enter drücken
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/mkleinsorg-creator/ai-ready-day/main/bootstrap.sh | bash
+curl -fsSL https://raw.githubusercontent.com/mkleinsorg-creator/ai-ready-day/main/bootstrap.sh -o ~/bootstrap.sh && bash ~/bootstrap.sh
 ```
 
 Das Script richtet dir alles ein und erklärt dabei, was es tut.

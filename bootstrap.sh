@@ -18,9 +18,22 @@ say "Hi! Ich richte dir jetzt alles ein. Dauert ca. 5 Minuten."
 say "Lies einfach mit — ich erkläre dir unterwegs, was passiert."
 sleep 1
 
+# Pre-check: TTY für interaktive Passwort-Eingaben (Homebrew braucht das)
+if [ ! -t 0 ]; then
+  echo ""
+  echo "⚠️  STOPP: Dieses Script läuft ohne TTY — Homebrew kann dich dann nicht"
+  echo "    nach deinem Mac-Passwort fragen."
+  echo ""
+  echo "    Bitte führ es stattdessen so aus (kopier den ganzen Block):"
+  echo ""
+  echo "    curl -fsSL https://raw.githubusercontent.com/mkleinsorg-creator/ai-ready-day/main/bootstrap.sh -o ~/bootstrap.sh && bash ~/bootstrap.sh"
+  echo ""
+  exit 1
+fi
+
 # 1. Homebrew
 if ! command -v brew >/dev/null 2>&1; then
-  say "Schritt 1/9 · Ich installiere Homebrew (Paketmanager für Mac)."
+  say "Schritt 1/10 · Ich installiere Homebrew (Paketmanager für Mac)."
   echo "    Du wirst gleich nach deinem Mac-Passwort gefragt — das ist normal."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   if [[ -d /opt/homebrew ]]; then
@@ -28,16 +41,16 @@ if ! command -v brew >/dev/null 2>&1; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
   fi
 else
-  say "Schritt 1/9 · Homebrew"
+  say "Schritt 1/10 · Homebrew"
   ok "schon installiert"
 fi
 
 # 2. Node.js
 if ! command -v node >/dev/null 2>&1 || [ "$(node -v 2>/dev/null | cut -d. -f1 | tr -d 'v')" -lt 20 ]; then
-  say "Schritt 2/9 · Ich installiere Node.js (das brauchen alle Tools heute)."
+  say "Schritt 2/10 · Ich installiere Node.js (das brauchen alle Tools heute)."
   brew install node
 else
-  say "Schritt 2/9 · Node.js"
+  say "Schritt 2/10 · Node.js"
   ok "schon installiert ($(node -v))"
 fi
 
