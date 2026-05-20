@@ -22,7 +22,7 @@ Dauert ca. 5 Minuten. Wenn etwas hakt: Max rufen.
 ### 3. In die Claude Desktop App wechseln
 
 - **Öffne die Claude Desktop App** (die du eh schon hast)
-- Aktiviere das **integrierte Claude-Code-Fenster** (Max zeigt dir das morgen kurz)
+- Drück **`Cmd + 3`** — das öffnet das integrierte Claude-Code-Fenster
 - Kopier den Master-Prompt aus `~/ai-ready-day/prompts/00-router.md` in die erste Nachricht
   *(Alternativ:* `/load ~/ai-ready-day/prompts/00-router.md`*)*
 

@@ -77,7 +77,7 @@ Das Script erklärt unterwegs, was es macht. Lies mit — das hilft beim Versteh
 Wenn das Script `✅ Fertig` sagt: **Terminal kannst du jetzt liegenlassen.**
 
 - Öffne die **Claude Desktop App** (kennst du schon — das ist die, in der du sonst chattest)
-- Aktiviere das **integrierte Claude-Code-Fenster** (Max zeigt dir das morgen kurz — es ist ein eigenes Fenster innerhalb der App, in dem Slash-Commands wie `/bmad` funktionieren)
+- Drück **`Cmd + 3`** — das öffnet das integrierte Claude-Code-Fenster innerhalb der App. Dort funktionieren Slash-Commands wie `/bmad`.
 - In die erste Nachricht kopierst du den Master-Prompt aus `~/ai-ready-day/prompts/00-router.md` rein
   *(Alternativ:* `/load ~/ai-ready-day/prompts/00-router.md` *direkt eintippen)*
 
