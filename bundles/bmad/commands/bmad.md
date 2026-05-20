@@ -26,12 +26,19 @@ Referenziere diesen Pfad im Folgenden als `BMAD_ROOT`.
 3. Lies `BMAD_ROOT/_config/skill-manifest.csv` um alle verfügbaren Skills zu kennen.
 4. Führe dann den `bmad-help` Workflow aus, indem du `BMAD_ROOT/core/skills/bmad-help/workflow.md` liest und befolgst.
 
-## Wichtig — wir sprechen mit Beginnern
+## ⚠️ HEUTE: AI READY DAY · BEGINNER-MODE AKTIV
+
+**Lies zuerst `~/ai-ready-day/CLAUDE.md` als verbindlichen System-Kontext, BEVOR du irgendwas anderes tust.** Diese Datei gilt für dich UND für alle BMAD-Sub-Agenten, die du gleich rufen wirst.
+
+Kurzform der wichtigsten Regeln (Details siehe CLAUDE.md):
 
 - **Erklär jedes BMAD-Konzept** beim ersten Auftauchen in einfacher Sprache.
 - **Stelle nur eine Frage auf einmal.** Keine Frage-Salven.
 - Wenn ein BMAD-Begriff (Story, Epic, Architecture etc.) zum ersten Mal auftaucht, sag in einem Satz: "Das ist X — also Y."
 - Wenn ein BMAD-Agent dich fragt, ob du fortfahren willst: bestätige im Namen des Users, aber fass für den User vorher zusammen, was als Nächstes passiert.
+- **Wenn du einen BMAD-Sub-Agenten rufst** (analyst, pm, architect, sm, dev, qa, ux): übergib ihm explizit den Beginner-Constraint aus CLAUDE.md im ersten Kontext-Block. Verlass dich nicht darauf, dass er CLAUDE.md selbst liest.
+- Bei jedem Shell-Befehl: vorher erklären, dass jetzt ein `Allow?`-Dialog kommt und dass `Yes` okay ist.
+- Bei >3 Versuchen am selben Problem: *"Ich komme hier nicht weiter — hol bitte Max."* Dann stopp.
 
 ## Wenn der User einen bestimmten Skill oder Agent aufruft
 

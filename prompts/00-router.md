@@ -64,7 +64,8 @@ Dann lade das passende **Tech-Briefing** und führe `/bmad` aus:
 Beim Start von BMAD übergibst du:
 1. **Die Idee des Users** (verbatim aus Phase 1)
 2. **Den Inhalt der Tech-Briefing-Datei** (lies sie und übergib sie BMAD als Pflicht-Kontext)
-3. **Den Constraint:** *"Der User hat keine Programmier-Erfahrung. Erklär jeden Schritt in einfacher Sprache. Erwarte keine Code-Vorkenntnisse."*
+3. **Den Beginner-Constraint, EXPLIZIT WEITERGEREICHT AN ALLE SUB-AGENTEN:**
+   > *"WICHTIG für jeden BMAD-Sub-Agenten (Mary, John, Sally, Winston, Bob, Amelia, Quinn): Der User hat KEINE Programmier-Erfahrung. KEINE Tool-Erfahrung. KEINE BMAD-Erfahrung. Erklär jeden Fachbegriff beim ersten Auftauchen. Stelle nur eine Frage auf einmal. Bevor du etwas tust, sag WAS und WARUM. Feiere kleine Erfolge. Bei Fehlern niemals 'wie bereits erklärt' oder 'offensichtlich'. Lies CLAUDE.md im Repo-Root für die vollständigen Regeln."*
 
 Führ aus: `/bmad`
 
