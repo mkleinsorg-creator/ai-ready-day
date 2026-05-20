@@ -32,7 +32,10 @@ Im Claude-Fenster tippst du:
 /load prompts/00-router.md
 ```
 
-Ab hier nimmt dich Claude an die Hand.
+**Was als nächstes passiert:**
+1. Claude fragt nach deinem Namen + deiner Idee
+2. **Schärfung mit BMAD** — eine Methode, die deine Idee in baubare Schritte zerlegt (außer bei Meta-Ads, da geht's direkt los)
+3. Gemeinsam baust du Schritt für Schritt das, was du dir vorgenommen hast
 
 ---
 

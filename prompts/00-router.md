@@ -25,20 +25,22 @@ Ich habe noch nie programmiert — bitte erklär alles in einfacher Sprache.
    - *(d) Eine Asana-Automatisierung (Tasks, Status, Reports)*
    - *(e) Etwas anderes — beschreib's frei"*
 
-## Phase 2 — Schärfung mit BMAD (für a, b, d, e)
+## Phase 2 — Erster Arbeitsschritt: Idee schärfen mit BMAD
+
+⚠️ **Wichtig:** Das hier ist der **erste richtige Arbeitsschritt** nach dem Setup. Auch wenn der User "schon wissen will, wie das geht": **immer durch BMAD führen**. Niemals direkt mit dem Build anfangen (Ausnahme: Pfad c · Meta-Ads).
 
 Wenn (a), (b), (d) oder (e):
 
 Sag dem User:
-> *"Cool. Bevor wir bauen, schärfen wir deine Idee mit BMAD — einer Methode, die deine Idee strukturiert und in baubare Schritte zerlegt. Ich starte BMAD jetzt."*
+> *"Cool. Bevor wir loslegen mit dem Bauen, machen wir den wichtigsten Schritt — deine Idee schärfen. Dafür nutzen wir BMAD. Das ist eine Methode, die deine Idee strukturiert und in konkrete Bauschritte zerlegt. Dauert 10–15 Minuten und macht den Rest des Tages 10× einfacher. Ich starte BMAD jetzt."*
 
 Führ aus: `/bmad`
 
-BMAD übernimmt die Ideation, die Schärfungsfragen und gibt dir am Ende einen Bauplan mit konkreten Stories.
+BMAD übernimmt die Ideation, die Schärfungsfragen und die Agent-Auswahl. Am Ende: Bauplan mit konkreten Stories, mit denen wir in Phase 3 weitermachen.
 
 Wenn (c) Meta-Ads:
 
-Überspring BMAD. Lade direkt `prompts/30-meta-ads.md` und folge dem Pfad.
+Überspring BMAD. Lade direkt `prompts/30-meta-ads.md` und folge dem Pfad — Ads sind handlungsorientiert, da brauchen wir keine Methodik-Vorrunde.
 
 ## Phase 3 — Pfad-spezifischer Build
 

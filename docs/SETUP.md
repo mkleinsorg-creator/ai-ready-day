@@ -72,7 +72,7 @@ Das Script erklärt unterwegs, was es macht. Lies mit — das hilft beim Versteh
 - Mit dem zugehörigen Account anmelden
 - Zurück ins Terminal — Script läuft weiter
 
-## 6. Loslegen
+## 6. Loslegen — der erste echte Schritt heißt BMAD
 
 Wenn das Script `✅ Fertig` sagt, tippst du:
 
@@ -88,6 +88,13 @@ Du bist jetzt in Claude Code. Dann:
 ```
 
 Claude begrüßt dich und fragt, was du heute bauen willst.
+
+**Dein erster Arbeitsschritt heißt BMAD** — eine Methode, die mit dir gemeinsam deine Idee schärft, ein paar gezielte Fragen stellt und am Ende einen Bauplan mit konkreten Schritten liefert.
+
+Lass dich davon nicht abschrecken — du musst die Methode nicht verstehen. Du beantwortest einfach die Fragen, BMAD macht den Rest.
+
+*(Ausnahme: Wer Meta-Ads baut, überspringt BMAD und geht direkt zur Facebook Ads CLI.)*
+
 Ab hier: einfach machen lassen. Du bist in guten Händen.
 
 ---
