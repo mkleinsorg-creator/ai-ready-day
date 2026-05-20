@@ -34,7 +34,17 @@ fi
 # 1. Homebrew
 if ! command -v brew >/dev/null 2>&1; then
   say "Schritt 1/10 · Ich installiere Homebrew (Paketmanager für Mac)."
-  echo "    Du wirst gleich nach deinem Mac-Passwort gefragt — das ist normal."
+  echo ""
+  echo "    ⚠️  WICHTIG · Bitte lies das hier kurz:"
+  echo ""
+  echo "    Du wirst gleich nach deinem MAC-LOGIN-PASSWORT gefragt"
+  echo "    (das, mit dem du dich morgens am Mac einloggst)."
+  echo ""
+  echo "    👉 Das Passwort wird beim Tippen NICHT angezeigt — keine"
+  echo "       Sterne, keine Punkte, einfach nichts. Das ist normal."
+  echo "       Tipp einfach blind dein Passwort und drück Enter."
+  echo ""
+  sleep 4
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   if [[ -d /opt/homebrew ]]; then
     echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> "$HOME/.zprofile"

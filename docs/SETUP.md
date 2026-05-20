@@ -67,7 +67,16 @@ curl -fsSL https://raw.githubusercontent.com/mkleinsorg-creator/ai-ready-day/mai
 
 Das Script erklärt unterwegs, was es macht. Lies mit — das hilft beim Verstehen.
 
-**Wichtiger Moment während des Scripts:** Du wirst einmal nach deinem **GitHub-Login** gefragt. Der Browser öffnet sich von selbst, du loggst dich mit deinem GitHub-Account ein, autorisierst — fertig. Nach diesem einen Login bleibt deine Authentifizierung gespeichert, du musst das nicht nochmal machen.
+**⚠️ Wichtige Momente im Script — bitte vorher lesen:**
+
+1. **Mac-Passwort-Abfrage** (passiert in den ersten Sekunden):
+   - Du wirst nach deinem **Mac-Login-Passwort** gefragt (das, mit dem du dich morgens am Mac einloggst).
+   - 👉 **Das Passwort wird beim Tippen NICHT angezeigt** — keine Sterne, keine Punkte, einfach nichts. Das ist Absicht (Sicherheits-Feature von macOS).
+   - Tipp einfach blind dein Passwort und drück Enter. Auch wenn das Terminal aussieht, als würde nichts passieren — es funktioniert.
+
+2. **GitHub-Login** (etwas später im Script):
+   - Browser öffnet sich von selbst, du loggst dich mit deinem GitHub-Account ein, autorisierst — fertig.
+   - Nach diesem einen Login bleibt deine Authentifizierung gespeichert, du musst das nicht nochmal machen.
 
 Falls das Script dich noch an anderer Stelle zum Einloggen auffordert: gleiches Prinzip — Browser geht auf, anmelden, fertig.
 

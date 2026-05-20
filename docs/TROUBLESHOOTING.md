@@ -19,6 +19,22 @@ Tipp `Ctrl + C` (das stoppt Claude) und sag ihm:
 
 ## Setup-Probleme
 
+### "Ich kann beim Passwort nichts tippen"
+
+Doch, du kannst — du siehst es nur nicht. **macOS zeigt Passwörter beim Tippen NIE an** (keine Sterne, keine Punkte, einfach nichts). Das ist ein Sicherheits-Feature, kein Bug.
+
+Tipp einfach blind dein normales **Mac-Login-Passwort** (das, mit dem du dich morgens einloggst) und drück Enter. Auch wenn das Terminal aussieht, als würde nichts passieren — es funktioniert.
+
+### "3 incorrect password attempts"
+
+macOS hat dein Passwort dreimal nicht akzeptiert. Häufige Gründe:
+- Du hast das falsche Passwort eingegeben (z. B. Apple-ID-Passwort statt Mac-Login-Passwort)
+- Die Caps-Lock-Taste war an
+- Du hast aus Versehen das alte Passwort eingegeben, falls du es kürzlich geändert hast
+
+Lösung: Bootstrap nochmal starten und es nochmal probieren. Falls auch dann nicht: Max rufen.
+
+
 ### `command not found: claude`
 
 Wahrscheinlich ist Node.js nicht richtig im PATH. Lösung:
