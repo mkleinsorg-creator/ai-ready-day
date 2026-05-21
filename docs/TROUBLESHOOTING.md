@@ -133,6 +133,40 @@ Oder lass Claude dich Schritt für Schritt durchführen.
 
 ---
 
+## Windows-spezifisch
+
+### "winget ist nicht installiert"
+
+winget kommt mit dem **App Installer** aus dem Microsoft Store. Lösung:
+- Microsoft Store öffnen
+- "App Installer" suchen → aktualisieren oder installieren
+- PowerShell neu öffnen
+- Bootstrap erneut starten
+
+### "Die Ausführung von Skripten ist auf diesem System deaktiviert"
+
+Standard-PowerShell-Sicherheitseinstellung. Lösung:
+- Den Bootstrap immer mit `-ExecutionPolicy Bypass` starten (steht im Setup-Befehl)
+- Falls trotzdem Fehler: PowerShell als Administrator öffnen und einmalig ausführen:
+  ```powershell
+  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+  ```
+
+### `gh`-Browser-Login öffnet sich nicht
+
+URL aus dem Code-Block kopieren und manuell im Browser einfügen. Der Code aus dem PowerShell-Fenster wird im Browser-Formular abgefragt.
+
+### Claude-Code-Fenster geht mit Ctrl+3 nicht auf
+
+Das Tastenkürzel kann auf Windows abweichen. Probier:
+- `Ctrl + 3`
+- `Alt + 3`
+- Oder im Menü der Claude Desktop App nach "Code" oder "Developer" suchen
+
+Wenn nichts klappt: Max rufen.
+
+---
+
 ## Last Resort
 
 **Max rufen.** Das ist heute kein Versagen — das ist Plan.

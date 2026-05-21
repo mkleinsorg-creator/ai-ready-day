@@ -3,7 +3,14 @@
 > Bau heute dein eigenes Tool, deinen eigenen Workflow oder deine eigene Anzeige —
 > mit Claude Code als Co-Pilot. Du brauchst keine Programmier-Erfahrung.
 
-## Start in 3 Schritten
+## Welches Betriebssystem hast du?
+
+- 🍎 **Mac** → folge der Anleitung unten (oder ausführlich in `docs/SETUP.md`)
+- 🪟 **Windows** → springe direkt zu `docs/SETUP-WINDOWS.md`
+
+---
+
+## Start in 3 Schritten (Mac)
 
 ### 1. Terminal öffnen (nur für das einmalige Setup)
 
@@ -35,6 +42,27 @@ Lies @~/ai-ready-day/prompts/00-router.md vollständig und folge diesen Anweisun
 3. Gemeinsam baust du Schritt für Schritt das, was du dir vorgenommen hast
 
 Das Terminal kannst du danach geschlossen lassen oder im Hintergrund liegen — wir holen es nur raus, wenn ein echter Build-Befehl ansteht.
+
+---
+
+## Start in 3 Schritten (Windows)
+
+Vollständige Anleitung: **[docs/SETUP-WINDOWS.md](docs/SETUP-WINDOWS.md)**
+
+Kurzfassung:
+
+1. PowerShell öffnen (Windows-Taste → `PowerShell` tippen → Enter)
+2. Diese beiden Befehle nacheinander reinkopieren:
+
+```powershell
+irm https://raw.githubusercontent.com/mkleinsorg-creator/ai-ready-day/main/bootstrap.ps1 -OutFile $env:TEMP\bootstrap.ps1
+```
+
+```powershell
+powershell -ExecutionPolicy Bypass -File $env:TEMP\bootstrap.ps1
+```
+
+3. Wenn das Script `✅ Fertig` sagt: Claude Desktop App öffnen → `Ctrl + 3` → Master-Prompt-Aufruf (siehe SETUP-WINDOWS.md)
 
 ---
 
